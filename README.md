@@ -1,1 +1,0 @@
-# Strukturinis-programavimas
