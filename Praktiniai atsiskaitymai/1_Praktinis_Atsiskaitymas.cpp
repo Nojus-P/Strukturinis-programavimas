@@ -16,49 +16,60 @@ int main() {
     double INR_Pirkti = 101.3862;
     double INR_Parduoti = 107.8546;
 
-    int pasirinkimas;
+    int pasirinkimas = 0;
     int valiuta;
     double kiekis;
     double rezultatas;
 
-    cout << "1 - Palyginti kursa" << endl;
-    cout << "2 - Pirkti valiuta" << endl;
-    cout << "3 - Parduoti valiuta" << endl;
-    cin >> pasirinkimas;
+    while (pasirinkimas != 4) {
 
-    cout << "Pasirink valiuta: 1-GBP 2-USD 3-INR" << endl;
-    cin >> valiuta;
+        cout << endl;
+        cout << "1 - Palyginti kursa" << endl;
+        cout << "2 - Pirkti valiuta" << endl;
+        cout << "3 - Parduoti valiuta" << endl;
+        cout << "4 - Uzdaryti programa" << endl;
 
-    if (pasirinkimas == 1) {
+        cin >> pasirinkimas;
 
-        if (valiuta == 1) cout << "GBP kursas: " << GBP_Bendras << endl;
-        if (valiuta == 2) cout << "USD kursas: " << USD_Bendras << endl;
-        if (valiuta == 3) cout << "INR kursas: " << INR_Bendras << endl;
+        if (pasirinkimas == 4) {
+            cout << "Programa uzdaroma..." << endl;
+            break;
+        }
 
-    }
-    else if (pasirinkimas == 2) {
+        cout << "Pasirink valiuta: 1-GBP 2-USD 3-INR" << endl;
+        cin >> valiuta;
 
-        cout << "Iveskite EUR suma: ";
-        cin >> kiekis;
+        if (pasirinkimas == 1) {
 
-        if (valiuta == 1) rezultatas = kiekis * GBP_Pirkti;
-        if (valiuta == 2) rezultatas = kiekis * USD_Pirkti;
-        if (valiuta == 3) rezultatas = kiekis * INR_Pirkti;
+            if (valiuta == 1) cout << "GBP kursas: " << GBP_Bendras << endl;
+            if (valiuta == 2) cout << "USD kursas: " << USD_Bendras << endl;
+            if (valiuta == 3) cout << "INR kursas: " << INR_Bendras << endl;
 
-        cout << fixed << setprecision(2);
-        cout << "Gausite: " << rezultatas << endl;
-    }
-    else if (pasirinkimas == 3) {
+        }
+        else if (pasirinkimas == 2) {
 
-        cout << "Iveskite valiutos suma: ";
-        cin >> kiekis;
+            cout << "Iveskite EUR suma: ";
+            cin >> kiekis;
 
-        if (valiuta == 1) rezultatas = kiekis * GBP_Parduoti;
-        if (valiuta == 2) rezultatas = kiekis * USD_Parduoti;
-        if (valiuta == 3) rezultatas = kiekis * INR_Parduoti;
+            if (valiuta == 1) rezultatas = kiekis * GBP_Pirkti;
+            if (valiuta == 2) rezultatas = kiekis * USD_Pirkti;
+            if (valiuta == 3) rezultatas = kiekis * INR_Pirkti;
 
-        cout << fixed << setprecision(2);
-        cout << "Gausite: " << rezultatas << " EUR" << endl;
+            cout << fixed << setprecision(2);
+            cout << "Gausite: " << rezultatas << endl;
+        }
+        else if (pasirinkimas == 3) {
+
+            cout << "Iveskite valiutos suma: ";
+            cin >> kiekis;
+
+            if (valiuta == 1) rezultatas = kiekis * GBP_Parduoti;
+            if (valiuta == 2) rezultatas = kiekis * USD_Parduoti;
+            if (valiuta == 3) rezultatas = kiekis / INR_Parduoti;
+
+            cout << fixed << setprecision(2);
+            cout << "Gausite: " << rezultatas << " EUR" << endl;
+        }
     }
 
     return 0;
