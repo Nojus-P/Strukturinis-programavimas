@@ -24,7 +24,6 @@ int main() {
             break;
         }
 
-        // 🔹 Prideti mokini
         if (pasirinkimas == 1) {
 
             if (mokiniuKiekis >= 100) {
@@ -51,7 +50,6 @@ int main() {
             mokiniuKiekis++;
         }
 
-        // 🔹 Perziureti visus
         if (pasirinkimas == 2) {
 
             if (mokiniuKiekis == 0) {
@@ -71,7 +69,6 @@ int main() {
             }
         }
 
-        // 🔹 Atnaujinti pazymi
         if (pasirinkimas == 3) {
 
             if (mokiniuKiekis == 0) {
@@ -115,7 +112,6 @@ int main() {
             }
         }
 
-        // 🔹 Pasalinti mokini
         if (pasirinkimas == 4) {
 
             if (mokiniuKiekis == 0) {
