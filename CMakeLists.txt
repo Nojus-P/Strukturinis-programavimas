@@ -20,4 +20,5 @@ add_executable(Struktrinis_programavimas main.cpp
         "Paskaitų praktika/4 Paskaitos praktinės užduotys/Užduotis_1.cpp"
         "Paskaitų praktika/4 Paskaitos praktinės užduotys/Užduotis_2.cpp"
         "Praktiniai atsiskaitymai/1_Praktinis_Atsiskaitymas.cpp"
+        "Praktiniai atsiskaitymai/2_Praktinis_Atsiskaitymas.cpp"
 )
