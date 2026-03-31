@@ -63,8 +63,8 @@ int main() {
             cout << "Iveskite valiutos suma: ";
             cin >> kiekis;
 
-            if (valiuta == 1) rezultatas = kiekis * GBP_Parduoti;
-            if (valiuta == 2) rezultatas = kiekis * USD_Parduoti;
+            if (valiuta == 1) rezultatas = kiekis / GBP_Parduoti;
+            if (valiuta == 2) rezultatas = kiekis / USD_Parduoti;
             if (valiuta == 3) rezultatas = kiekis / INR_Parduoti;
 
             cout << fixed << setprecision(2);

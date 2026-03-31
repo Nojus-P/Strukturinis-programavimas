@@ -45,7 +45,11 @@ int main() {
             for (int i = 0; i < pazymiuKiekis[mokiniuKiekis]; i++) {
                 cout << "Iveskite pazymi: ";
                 cin >> pazymiai[mokiniuKiekis][i];
-            }
+
+                if (pazymiai[mokiniuKiekis][i] < 1 || pazymiai[mokiniuKiekis][i] > 10) {
+                    cout << "Pazymys turi buti nuo 1 iki 10!" << endl;
+                    i--; // leidžia įvesti dar kartą
+                }            }
 
             mokiniuKiekis++;
         }
@@ -104,8 +108,14 @@ int main() {
                 nr--;
 
                 if (nr >= 0 && nr < pazymiuKiekis[indeksas]) {
-                    cout << "Naujas pazymys: ";
-                    cin >> pazymiai[indeksas][nr];
+                    int naujas;
+
+                    do {
+                        cout << "Naujas pazymys (1-10): ";
+                        cin >> naujas;
+                    } while (naujas < 1 || naujas > 10);
+
+                    pazymiai[indeksas][nr] = naujas;
                 } else {
                     cout << "Neteisingas numeris!" << endl;
                 }
