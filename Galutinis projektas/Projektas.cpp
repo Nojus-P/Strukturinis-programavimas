@@ -268,14 +268,17 @@ int main()
 
             case 2:
                 addComponent();
+                saveToFile();
                 break;
 
             case 3:
                 updateComponent();
+                saveToFile();
                 break;
 
             case 4:
                 deleteComponent();
+                saveToFile();
                 break;
 
             case 5:
