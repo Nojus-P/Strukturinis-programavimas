@@ -247,6 +247,7 @@ void sortByPrice()
     showAllComponents();
 }
 
+
 int main()
 {
     loadFromFile();
